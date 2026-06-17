@@ -17,26 +17,36 @@ public class Mappa
     private int altezza;
     private List<Zona> zone;
 
-    //Costruttore
+    /**
+     * Costruttore della Mappa
+     * @param larghezza della Mappa
+     * @param altezza della Mappa
+     * @param zone la lista delle zone presentei nella Mappa
+     * @throws IllegalArgumentException se altezza e larghezza sono negativi
+     * @throws NullPointerException se la lista delle zone è null
+     */
     public Mappa(int larghezza, int altezza, List<Zona> zone)
     {
         if(larghezza < 0 || altezza < 0) throw new IllegalArgumentException("dimensioni non valide");
+        if(zone == null) throw new NullPointerException("zone è un array nullo");
         this.larghezza = larghezza;
         this.altezza = altezza;
         this.zone = new ArrayList<>(zone);
     }
 
-    //Metodi
-
-    public int getLarghezza() {
+    //Metodi Getter
+    public int getLarghezza()
+    {
         return larghezza;
     }
 
-    public int getAltezza() {
+    public int getAltezza()
+    {
         return altezza;
     }
 
-    public List<Zona> getZone() {
+    public List<Zona> getZone()
+    {
         return List.copyOf(zone);
     }
 

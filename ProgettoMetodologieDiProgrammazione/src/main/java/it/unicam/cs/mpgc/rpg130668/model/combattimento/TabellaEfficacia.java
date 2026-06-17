@@ -54,8 +54,6 @@ public class TabellaEfficacia
 
         //Normale non ha ne' forza ne' debolezze: non gli serve nessuna riga,
         //il caso "non trovato" viene gestito di default in moltiplicatore().
-
-
     }
 
     /**
@@ -64,9 +62,11 @@ public class TabellaEfficacia
      * @return il moltiplicatore di danno: 2.0 se super efficace, 0.5 se poco
      * efficace, 1.0 se l'efficacia e' normale (incluso il caso in cui la
      * combinazione di tipi non sia stata definita esplicitamente in tabella)
+     * @throws NullPointerException se uno dei pokemon passati è null
      */
     public double moltiplicatore(TipoPokemon attaccante, TipoPokemon difensore)
     {
+        if(attaccante == null || difensore == null) throw new NullPointerException("Uno dei Pokemon passati è null");
         // Primo livello: trovo la "riga" del tipo attaccante. Se quel tipo
         // non ha nessuna riga (es. Normale), uso una mappa vuota come
         // alternativa, cosi' evito un NullPointerException alla riga dopo.

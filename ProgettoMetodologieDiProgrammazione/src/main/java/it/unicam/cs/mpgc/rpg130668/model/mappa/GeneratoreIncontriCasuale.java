@@ -18,18 +18,28 @@ public class GeneratoreIncontriCasuale implements GeneratoreIncontri
     private static final int LIVELLO_MINIMO = 2;
     private static final int LIVELLO_MASSIMO = 5;
 
+    /**
+     * Genera l'incontro tra il pokemon dell'allenatore e il Pokemon selvatico trovato nella mappa
+     * @param zona la zona in cui l'allenatore si trova attualmente
+     * @return Un Pokemon Selvatico che potrebbe anche non "spawnare" per via del tasso incontro
+     * o per le specie non disponibili in quella zona
+     * @throws NullPointerException se la zona passata è null
+     */
     @Override
     public Optional<Pokemon> generaIncontro(Zona zona)
     {
+        if(zona == null) throw new NullPointerException("La zona passata è null");
         // Math.random() restituisce un numero tra 0 (incluso) e 1 (escluso).
         // Se e' maggiore o uguale al tasso di incontro della zona, niente incontro.
         double casuale = Math.random();
-        if (casuale >= zona.tassoIncontro()) {
+        if (casuale >= zona.tassoIncontro())
+        {
             return Optional.empty();
         }
 
         List<PokemonSpecie> specieDisponibili = zona.specieDisponibili();
-        if (specieDisponibili.isEmpty()) {
+        if (specieDisponibili.isEmpty())
+        {
             // La probabilita' era favorevole, ma non c'e' nessuna specie
             // configurata per questa zona: nessun incontro possibile.
             return Optional.empty();

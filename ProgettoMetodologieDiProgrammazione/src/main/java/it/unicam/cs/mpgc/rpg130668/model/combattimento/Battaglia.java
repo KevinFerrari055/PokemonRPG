@@ -46,21 +46,27 @@ public class Battaglia
     {
         if(mossaScelta == null) throw new NullPointerException("La mossa passata è null");
 
+        //Se la partita è finita, il turno non viene eseguito
         if (isFinita()) {
             return;
         }
 
+        //Controllo sulla velocità chi inizia per primo(scelto da me)
         boolean allenatorePiuVeloce = pokemonAllenatore.getSpecie().velocitaBase()
                 >= pokemonAvversario.getSpecie().velocitaBase();
 
-        if (allenatorePiuVeloce) {
+        if (allenatorePiuVeloce)
+        {
             attacca(pokemonAllenatore, pokemonAvversario, mossaScelta);
-            if (!pokemonAvversario.isFuoriCombattimento()) {
+            if (!pokemonAvversario.isFuoriCombattimento())
+            {
                 attaccaSePossibile(pokemonAvversario, pokemonAllenatore, sceglieMossaAvversario());
             }
-        } else {
+        } else
+        {
             attaccaSePossibile(pokemonAvversario, pokemonAllenatore, sceglieMossaAvversario());
-            if (!pokemonAllenatore.isFuoriCombattimento()) {
+            if (!pokemonAllenatore.isFuoriCombattimento())
+            {
                 attacca(pokemonAllenatore, pokemonAvversario, mossaScelta);
             }
         }

@@ -17,10 +17,20 @@ public enum TipoElementale implements TipoPokemon
 
     private final String nome;
 
-    TipoElementale(String nome) {
+    /**
+     * Costruttore che rappresenta il tipo dell'elemento che rappresenta il pokemon
+     * @param nome del tipo
+     */
+    TipoElementale(String nome)
+    {
+        if(nome == null) throw new NullPointerException("il nome passato è null");
+        if(!(nome.trim().equals("Fuoco") ||
+                nome.trim().equals("Acqua") ||
+                nome.trim().equals("Erba") ||
+                nome.trim().equals("Normale") ||
+                nome.trim().equals("Elettrico"))) throw new IllegalArgumentException("il nome del tipo non corrisponde a nessuno dei valori esistenti");
         this.nome = nome;
     }
-
     @Override
     public String getNome() {
         return nome;

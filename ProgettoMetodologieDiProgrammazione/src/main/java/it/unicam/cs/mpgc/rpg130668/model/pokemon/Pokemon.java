@@ -32,10 +32,15 @@ public class Pokemon
      * @param specie il "template" di specie a cui questo Pokemon appartiene (non null)
      * @param livello il livello iniziale del Pokemon (non negativo)
      * @throws IllegalArgumentException se uno dei parametri non e' valido
+     * @throws NullPointerException se id o specie sono null
      */
     public Pokemon(String id, PokemonSpecie specie, int livello)
     {
-        if(id == null || id.isEmpty() || specie == null || livello < 0)
+        if(id == null || specie == null)
+        {
+            throw new NullPointerException("Id o specie sono null");
+        }
+        if(id.isEmpty() || livello < 0)
         {
             throw new IllegalArgumentException("Parametri non validi");
         }
@@ -48,15 +53,20 @@ public class Pokemon
     }
 
     // Metodi getter and Setter
-    public String getId() {
+    public String getId()
+    {
         return id;
     }
 
-    public String getNickName() {
+    public String getNickName()
+    {
         return nickName;
     }
 
-    public void setNickName(String nickName) {
+    public void setNickName(String nickName)
+    {
+        if(nickName == null) throw new NullPointerException("Il nuovo nickName da impostare è null");
+        if(nickName.length() < 3) throw new IllegalArgumentException("Il nickname è troppo corto");
         this.nickName = nickName;
     }
 
@@ -116,5 +126,13 @@ public class Pokemon
         if(mosseApprese.contains(mossa)) return false;
         this.mosseApprese.add(mossa);
         return true;
+    }
+
+    /**
+     * @return il nickname se e' stato assegnato, altrimenti il nome della specie.
+     */
+    public String getNomeVisualizzato()
+    {
+        return nickName != null ? nickName : specie.nome();
     }
 }

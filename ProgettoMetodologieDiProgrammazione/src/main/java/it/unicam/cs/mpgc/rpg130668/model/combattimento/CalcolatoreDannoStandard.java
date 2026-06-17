@@ -31,11 +31,14 @@ public class CalcolatoreDannoStandard implements CalcolatoreDanno
      * @param attaccante il Pokemon che esegue l'attacco
      * @param difensore il Pokemon che subisce l'attacco
      * @param mossa la mossa usata per l'attacco
-     * @return
+     * @throws NullPointerException se uno dei parametri passati è null
+     * @return il danno calcolato da infliggere all'avversario, dipende chi chiama il metodo se è l'attaccante o il difensore.
+     * Da notare che questo danno inflitto non è mai zero, minimo ritorna 1.
      */
     @Override
     public int calcolaDanno(Pokemon attaccante, Pokemon difensore, Mossa mossa)
     {
+        if(attaccante == null || difensore == null || mossa == null) throw new NullPointerException("Uno dei parametri passati è null");
         // Efficacia ricavata dal tipo della MOSSA (non dal Pokemon attaccante:
         // un Pokemon puo' usare mosse di tipo diverso dal proprio) contro il
         // tipo del difensore. Per ora, visto che un Pokemon puo' avere piu'

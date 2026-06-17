@@ -33,22 +33,27 @@ public class Allenatore
         this.squadra = new Squadra();
     }
 
+    //GetPosizione
     public Posizione getPosizione() {
         return posizione;
     }
 
+    //SetPosizione
     public void setPosizione(Posizione posizione) {
         this.posizione = posizione;
     }
 
+    //GetUsername
     public String getUsername() {
         return username;
     }
 
+    //GetID
     public String getId() {
         return id;
     }
 
+    //GetSquadra
     public Squadra getSquadra() {
         return squadra;
     }
