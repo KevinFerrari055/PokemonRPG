@@ -52,7 +52,7 @@ public class Pokemon
         this.mosseApprese = new ArrayList<>();
     }
 
-    // Metodi getter and Setter
+    // Metodi Getter and Setter
     public String getId()
     {
         return id;
