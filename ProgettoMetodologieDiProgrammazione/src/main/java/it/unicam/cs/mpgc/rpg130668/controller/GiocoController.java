@@ -16,10 +16,11 @@ import java.util.Optional;
 import java.util.UUID;
 
 /**
- * Questa classe rappresenta il mediatore tra la GUI e tutto il resto
- * dell'applicazione. E' l'unico punto di contatto; non parla mai direttamente con Pokemon
- * Battaglia, AllenatoreRepositoryFile o qualsiasi altra classe del modello o della persistence
- * Quindi questo vuol dire che se in futuro voglio cambiamo la GUI, il controller non lo modifico, cambierò solo le schermate
+ * Mediatore tra la GUI e il resto dell'applicazione (model e persistence).
+ * E' l'unico punto di contatto: la GUI non accede mai direttamente alle classi
+ * del model o della persistence, ma passa sempre da qui.
+ * Questo garantisce che, se in futuro si vuole sostituire la GUI (es. passare
+ * da Swing a JavaFX o a una versione web), il controller resta invariato.
  */
 public class GiocoController
 {
@@ -32,6 +33,11 @@ public class GiocoController
     private GeneratoreIncontri generatoreIncontri;
 
     //Costruttore
+    /**
+     * @param allenatoreRepository il repository per la persistenza degli allenatori
+     * @param pokemonRepository il repository per la persistenza dei Pokemon
+     * @throws NullPointerException se uno dei repository e' null
+     */
     public GiocoController(AllenatoreRepository allenatoreRepository, PokemonRepository pokemonRepository)
     {
         if(allenatoreRepository == null || pokemonRepository == null) throw new NullPointerException("Uno dei parametri è null");
@@ -44,8 +50,19 @@ public class GiocoController
 
 
     //Metodi
+    /**
+     * Crea un nuovo allenatore con l'username fornito, lo imposta come
+     * allenatore corrente e lo salva nel repository.
+     *
+     * @param id identificativo univoco dell'allenatore
+     * @param username il nome scelto dal giocatore
+     * @throws NullPointerException se uno dei parametri è null
+     * @throws IllegalArgumentException se id è vuoto o username è corto
+     */
     public void creaAllenatore(String id, String username)
     {
+        if(id == null || username == null) throw new NullPointerException("uno dei parametri è null");
+        if(id.isEmpty() || username.length() < 3) throw new IllegalArgumentException("le stringhe passate non sono valide");
         Allenatore nuovo = new Allenatore(id, username, new Posizione(10, 10));
         this.allenatoreCorrente = nuovo;
         allenatoreRepository.salva(nuovo);
