@@ -28,7 +28,7 @@ public class Mappa
      * @throws NullPointerException se la lista delle zone è null
      * @throws NullPointerException se la griglia è null.
      */
-    public Mappa(int larghezza, int altezza, List<Zona> zone, TipoCella[][] griglia)
+    public Mappa(int larghezza, int altezza, TipoCella[][] griglia, List<Zona> zone)
     {
         if(larghezza < 0 || altezza < 0) throw new IllegalArgumentException("dimensioni non valide");
         if(zone == null) throw new NullPointerException("zone è un array nullo");

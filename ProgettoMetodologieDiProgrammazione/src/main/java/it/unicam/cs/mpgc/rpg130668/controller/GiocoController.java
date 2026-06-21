@@ -167,6 +167,12 @@ public class GiocoController
                 .orElse(null);
     }
 
+    //Metodi getter
+    public Mappa getMappa() { return mappa; }
+    public Posizione getPosizione() { return allenatoreCorrente.getPosizione(); }
+    public boolean isBattagliaInCorso() { return battagliaInCorso != null; }
+    public Battaglia getBattagliaInCorso() { return battagliaInCorso; }
+    public Allenatore getAllenatoreCorrente() { return allenatoreCorrente; }
 
 
 }
