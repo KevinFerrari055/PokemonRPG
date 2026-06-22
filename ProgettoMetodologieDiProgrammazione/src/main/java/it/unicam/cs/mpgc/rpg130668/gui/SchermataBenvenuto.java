@@ -83,12 +83,33 @@ public class SchermataBenvenuto extends JFrame
         pannelloPrincipale.add(pannelloCentro, BorderLayout.CENTER);
 
         //Bottone (area SUD)
+        JButton bottoneInizio = getJButton(campoUsername);
+
+        //Se premo nel campo testo, ottengo lo stesso effetto del click sul bottone
+        campoUsername.addActionListener(e -> bottoneInizio.doClick());
+
+        JPanel pannelloBottone = new JPanel();
+        pannelloBottone.setOpaque(false);
+        pannelloBottone.add(bottoneInizio);
+        pannelloPrincipale.add(pannelloBottone, BorderLayout.SOUTH);
+
+        //Aggiungo il pannello principale alla finestra
+        add(pannelloPrincipale);
+
+
+
+
+    }
+
+    private JButton getJButton(JTextField campoUsername) {
         JButton bottoneInizio = new JButton("Inizia l'avventura!");
         bottoneInizio.setFont(new Font("Arial", Font.BOLD, 14));
-        bottoneInizio.setBackground(new Color(220, 50, 50)); //rosso Pokemon
+        bottoneInizio.setBackground(new Color(220, 50, 50));
         bottoneInizio.setForeground(Color.WHITE);
         bottoneInizio.setFocusPainted(false);
-        bottoneInizio.setCursor(new Cursor(Cursor.HAND_CURSOR)); // cursore a mano al passaggio
+        bottoneInizio.setOpaque(true);
+        bottoneInizio.setBorderPainted(false);
+        bottoneInizio.setCursor(new Cursor(Cursor.HAND_CURSOR));
         bottoneInizio.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         //Evento ActionListener: codice che viene eseguito quando si clicca il bottone
@@ -113,20 +134,6 @@ public class SchermataBenvenuto extends JFrame
             new SchermataSceltaStarter(controller);
             dispose();
         });
-
-        //Se premo nel campo testo, ottengo lo stesso effetto del click sul bottone
-        campoUsername.addActionListener(e -> bottoneInizio.doClick());
-
-        JPanel pannelloBottone = new JPanel();
-        pannelloBottone.setOpaque(false);
-        pannelloBottone.add(bottoneInizio);
-        pannelloPrincipale.add(pannelloBottone, BorderLayout.SOUTH);
-
-        //Aggiungo il pannello principale alla finestra
-        add(pannelloPrincipale);
-
-
-
-
+        return bottoneInizio;
     }
 }
