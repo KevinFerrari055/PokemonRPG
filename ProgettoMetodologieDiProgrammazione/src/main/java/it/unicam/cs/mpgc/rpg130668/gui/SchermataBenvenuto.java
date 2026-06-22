@@ -115,24 +115,21 @@ public class SchermataBenvenuto extends JFrame
         //Evento ActionListener: codice che viene eseguito quando si clicca il bottone
         bottoneInizio.addActionListener(e -> {
             String username = campoUsername.getText().trim();
-
-            //Validazione minima: almeno 3 caratteri
-            if(username.length() < 3)
-            {
-                //Mostro errore
-                JOptionPane.showMessageDialog(this, "Il nome deve avere almeno 3 caratteri!",
+            try {
+                controller.creaAllenatore(username, username);
+                new SchermataSceltaStarter(controller);
+                dispose();
+            } catch (IllegalArgumentException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "L'username non può essere vuoto, deve essere lungo almeno 3 caratteri",
                         "Errore",
                         JOptionPane.ERROR_MESSAGE);
-                return;
+            } catch (NullPointerException ex) {
+                JOptionPane.showMessageDialog(this,
+                        "Il nome non può essere vuoto!",
+                        "Errore",
+                        JOptionPane.ERROR_MESSAGE);
             }
-
-            //Chiamo il controller per creare l'allenatore
-            //uso username sia come id che come username
-            controller.creaAllenatore(username, username);
-
-            //Apro la schermata successiva e chiudo questa
-            new SchermataSceltaStarter(controller);
-            dispose();
         });
         return bottoneInizio;
     }
