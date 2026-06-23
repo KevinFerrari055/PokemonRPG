@@ -130,4 +130,9 @@ public class Battaglia
         int indiceCasuale = (int) (Math.random() * mosse.size());
         return mosse.get(indiceCasuale);
     }
+
+    public Pokemon getPokemonAvversario()
+    {
+        return pokemonAvversario;
+    }
 }

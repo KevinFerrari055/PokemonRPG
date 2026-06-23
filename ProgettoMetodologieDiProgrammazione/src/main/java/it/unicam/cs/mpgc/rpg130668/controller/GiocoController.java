@@ -63,7 +63,7 @@ public class GiocoController
     {
         if(id == null || username == null) throw new NullPointerException("uno dei parametri è null");
         if(id.isEmpty() || username.length() < 3) throw new IllegalArgumentException("le stringhe passate non sono valide");
-        Allenatore nuovo = new Allenatore(id, username, new Posizione(10, 10));
+        Allenatore nuovo = new Allenatore(id, username, new Posizione(5, 5));
         this.allenatoreCorrente = nuovo;
         allenatoreRepository.salva(nuovo);
     }
@@ -138,6 +138,7 @@ public class GiocoController
     {
         int nuovaX = allenatoreCorrente.getPosizione().x() + dx;
         int nuovaY = allenatoreCorrente.getPosizione().y() + dy;
+
         // fuori dai bordi della mappa
         if(nuovaX < 0 || nuovaX >= mappa.getLarghezza() ||
                 nuovaY < 0 || nuovaY >= mappa.getAltezza()) return;
@@ -231,6 +232,11 @@ public class GiocoController
     public boolean isBattagliaInCorso() { return battagliaInCorso != null; }
     public Battaglia getBattagliaInCorso() { return battagliaInCorso; }
     public Allenatore getAllenatoreCorrente() { return allenatoreCorrente; }
+    public Pokemon getPokemonAvversario()
+    {
+        if (battagliaInCorso == null) return null;
+        return battagliaInCorso.getPokemonAvversario();
+    }
 
 
 }

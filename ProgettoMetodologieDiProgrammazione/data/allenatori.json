@@ -75,5 +75,60 @@
     "squadra": {
       "pokemonPosseduti": []
     }
+  },
+  {
+    "id": "ciao",
+    "username": "ciao",
+    "posizione": {
+      "x": 10,
+      "y": 10
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "sss",
+    "username": "sss",
+    "posizione": {
+      "x": 10,
+      "y": 10
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "qqqqqqqq",
+    "username": "qqqqqqqq",
+    "posizione": {
+      "x": 10,
+      "y": 10
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "aaaa",
+    "username": "aaaa",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "4234234",
+    "username": "4234234",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
   }
 ]
