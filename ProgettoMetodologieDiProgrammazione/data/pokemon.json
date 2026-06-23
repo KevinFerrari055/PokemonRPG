@@ -38,5 +38,85 @@
         "categoria": "SPECIALE"
       }
     ]
+  },
+  {
+    "id": "cdb8719a-ecc0-4e5a-8619-3e775ba3c9ba",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 44,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Pistolacqua",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "27ba9d1d-a193-41e8-907a-a08bbe8f7970",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 44,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Pistolacqua",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
   }
 ]

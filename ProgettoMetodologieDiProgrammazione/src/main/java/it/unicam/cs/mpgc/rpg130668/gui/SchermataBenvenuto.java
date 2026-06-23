@@ -115,7 +115,8 @@ public class SchermataBenvenuto extends JFrame
         //Evento ActionListener: codice che viene eseguito quando si clicca il bottone
         bottoneInizio.addActionListener(e -> {
             String username = campoUsername.getText().trim();
-            try {
+            try
+            {
                 controller.creaAllenatore(username, username);
                 new SchermataSceltaStarter(controller);
                 dispose();
