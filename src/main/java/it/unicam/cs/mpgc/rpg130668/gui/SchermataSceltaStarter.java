@@ -13,10 +13,18 @@ import java.util.List;
  */
 public class SchermataSceltaStarter extends JFrame
 {
+    //Attributi
     private final GiocoController controller;
 
+
+    /**
+     * Costruttore della schermata di scelta dello starter
+     * @param controller passato al costruttore per permettere di creare i pokemon starter
+     * @throws NullPointerException se il controller passato è null
+     */
     public SchermataSceltaStarter(GiocoController controller)
     {
+        if(controller == null) throw new NullPointerException("Il controlller passato è null");
         this.controller = controller;
 
         setTitle("Pokemon RPG - Scegli il tuo starter");
@@ -31,6 +39,7 @@ public class SchermataSceltaStarter extends JFrame
 
     private void costruisciGui()
     {
+        //Pannello principale della GUI
         JPanel pannelloPrincipale = new JPanel(new BorderLayout());
         pannelloPrincipale.setBackground(new Color(30, 30, 60));
         pannelloPrincipale.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
@@ -46,6 +55,7 @@ public class SchermataSceltaStarter extends JFrame
         pannelloStarter.setOpaque(false);
         pannelloStarter.setBorder(BorderFactory.createEmptyBorder(20, 10, 20, 10));
 
+        //Mi ottengo tutti gli starter disponibili che sono solo 3.
         List<PokemonSpecie> starters = controller.getStarterDisponibili();
         for (PokemonSpecie specie : starters)
         {
@@ -76,9 +86,12 @@ public class SchermataSceltaStarter extends JFrame
 
         // --- IMMAGINE ---
         JComponent componenteImmagine = caricaImmagine(specie);
-        componenteImmagine.setAlignmentX(Component.CENTER_ALIGNMENT);
-        pannello.add(Box.createRigidArea(new Dimension(0, 10)));
-        pannello.add(componenteImmagine);
+        if(componenteImmagine != null)
+        {
+            componenteImmagine.setAlignmentX(Component.CENTER_ALIGNMENT);
+            pannello.add(Box.createRigidArea(new Dimension(0, 10)));
+            pannello.add(componenteImmagine);
+        }
 
         // --- NOME ---
         JLabel nome = new JLabel(specie.nome(), SwingConstants.CENTER);
@@ -111,7 +124,9 @@ public class SchermataSceltaStarter extends JFrame
         return pannello;
     }
 
-    private static JLabel getJLabel(PokemonSpecie specie) {
+    private static JLabel getJLabel(PokemonSpecie specie)
+    {
+        //Uso di codice html per rendere la definizione delle stats più leggibile
         JLabel stats = new JLabel(
                 "<html><center>" +
                         "PV: " + specie.pvBase() + "&nbsp;&nbsp;" +
@@ -127,12 +142,14 @@ public class SchermataSceltaStarter extends JFrame
         return stats;
     }
 
-    private JButton getJButton(PokemonSpecie specie) {
+    private JButton getJButton(PokemonSpecie specie)
+    {
+        //Bottone principale per la scelta del pokemon
         JButton bottone = new JButton("Scegli!");
         bottone.setFont(new Font("Arial", Font.BOLD, 13));
         SchermataBenvenuto.optionsButton(bottone);
         bottone.addActionListener(e -> {
-            controller.scegliStarter(specie);
+            controller.scegliStarter(specie); //richiamo il controller
             new SchermataMappa(controller);
             dispose();
         });
@@ -140,7 +157,9 @@ public class SchermataSceltaStarter extends JFrame
     }
 
     /**
-     * Carica l'immagine del Pokemon da resources.
+     * Metodo che carica l'immagine del pokemon
+     * @return un JLabel con l'immagine ridimensionata a 90x90 pixel,
+     * oppure null se l'immagine non è presente nel classpath
      */
     private JComponent caricaImmagine(PokemonSpecie specie)
     {
@@ -162,7 +181,9 @@ public class SchermataSceltaStarter extends JFrame
     }
 
     /**
-     * Restituisce il colore associato al tipo per distinguerli visivamente.
+     * Restituisce il colore associato al tipo elementale del Pokemon.
+     * @param nomeTipo il nome del tipo (es. "Fuoco", "Acqua", "Erba")
+     * @return il colore corrispondente al tipo, bianco se il tipo non è riconosciuto
      */
     private Color colorePerTipo(String nomeTipo)
     {
