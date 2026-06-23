@@ -21,8 +21,18 @@ public class SchermataMappa extends JFrame
     private static final int DIMENSIONE_CELLA = 32;
     private PannelloMappa pannelloMappa;
 
+    /**
+     * Costruttore della schermata che genera la mappa del gioco.
+     * Calcola le dimensioni della finestra in base alla griglia (20x20 celle
+     * da 32 pixel ciascuna) e forza un ridisegno dopo 100ms per garantire
+     * che l'allenatore sia visibile subito, senza aspettare il primo tasto.
+     *
+     * @param controller il controller principale del gioco
+     * @throws NullPointerException se il controller passato e' null
+     */
     public SchermataMappa(GiocoController controller)
     {
+        if(controller == null) throw new NullPointerException("Il controller passato è null");
         this.controller = controller;
 
         setTitle("Pokemon RPG - Mappa");
@@ -31,6 +41,7 @@ public class SchermataMappa extends JFrame
 
         costruisciGui();
 
+        //Mi ottengo la mappa dal controller
         Mappa mappa = controller.getMappa();
         int larghezza = mappa.getLarghezza() * DIMENSIONE_CELLA;
         int altezza = mappa.getAltezza() * DIMENSIONE_CELLA + 60;
@@ -39,8 +50,10 @@ public class SchermataMappa extends JFrame
         setLocationRelativeTo(null);
         setVisible(true);
 
-        // Forza il ridisegno del pannello appena la finestra e' visibile,
-        // cosi' l'allenatore appare subito senza aspettare il primo tasto
+        // Timer da 100ms: forza il ridisegno del pannello dopo che Swing
+        // ha completato il rendering della finestra. Senza questo, l'allenatore
+        // risulta invisibile al primo avvio e al ritorno da una battaglia,
+        // perche' paintComponent non viene chiamato automaticamente.
         javax.swing.Timer timer = new javax.swing.Timer(100, e -> pannelloMappa.repaint());
         timer.setRepeats(false);
         timer.start();
@@ -65,14 +78,19 @@ public class SchermataMappa extends JFrame
         barraInfo.add(labelInfo);
         add(barraInfo, BorderLayout.SOUTH);
 
+        // InputMap: associa ogni tasto fisico a un nome stringa.
         InputMap inputMap = getRootPane().getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW);
+        // ActionMap: associa ogni nome stringa a un'Action concreta da eseguire.
         ActionMap actionMap = getRootPane().getActionMap();
 
+        // Registro i quattro tasti freccia, ciascuno associato a un nome descrittivo
         inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_UP, 0), "su");
         inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_DOWN, 0), "giu");
         inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_LEFT, 0), "sinistra");
         inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_RIGHT, 0), "destra");
 
+        // Per ogni nome, definisco l'Action: sposta l'allenatore, ridisegna
+        // il pannello e controlla se e' scattato un incontro
         actionMap.put("su", new AbstractAction() {
             @Override public void actionPerformed(java.awt.event.ActionEvent e) {
                 controller.muovi(0, -1);
@@ -104,10 +122,17 @@ public class SchermataMappa extends JFrame
     }
 
     /**
-     * Pannello che disegna la griglia della mappa e la posizione dell'allenatore.
+     * Classe interna che disegna la griglia della mappa e la posizione dell'allenatore.
+     * E' interna a SchermataMappa perche' accede direttamente ai suoi campi
+     * (controller e DIMENSIONE_CELLA) senza bisogno di passarli come parametri,
+     * e non ha significato al di fuori di questa schermata.
+     * Sovrascrive paintComponent per disegnare la griglia e l'allenatore
+     * a mano con le API Graphics2D invece di usare componenti Swing standard.
      */
     private class PannelloMappa extends JPanel
     {
+        // Immagine dell'allenatore caricata una sola volta nel costruttore
+        // e riusata ad ogni chiamata di paintComponent per efficienza
         private final Image immagineAllenatore;
 
         public PannelloMappa()
@@ -118,6 +143,9 @@ public class SchermataMappa extends JFrame
                     mappa.getAltezza() * DIMENSIONE_CELLA
             ));
 
+            // Carico l'immagine dell'allenatore dal classpath una sola volta.
+            // Se non viene trovata, immagineAllenatore resta null e drawImage
+            // non disegna nulla (comportamento sicuro, non lancia eccezioni).
             Image img = null;
             try {
                 java.net.URL url = getClass().getClassLoader()
@@ -135,6 +163,13 @@ public class SchermataMappa extends JFrame
             this.immagineAllenatore = img;
         }
 
+        /**
+         * Ridisegna l'intera griglia e la posizione dell'allenatore.
+         * Viene chiamato automaticamente da Swing quando il pannello deve
+         * essere aggiornato (es. dopo repaint(), al ridimensionamento, ecc.).
+         *
+         * @param g il contesto grafico fornito da Swing
+         */
         @Override
         protected void paintComponent(Graphics g)
         {
@@ -177,6 +212,10 @@ public class SchermataMappa extends JFrame
         }
     }
 
+    /**
+     * Controlla se dopo un movimento e' scattato un incontro con un Pokemon selvatico.
+     * Se si', apre la SchermataBattaglia e chiude questa schermata.
+     */
     private void controllaBattaglia()
     {
         if (controller.isBattagliaInCorso()) {
