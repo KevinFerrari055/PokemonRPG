@@ -249,6 +249,11 @@ public class GiocoController
         return battagliaInCorso.getPokemonAvversario();
     }
 
+    public boolean isGameOver()
+    {
+        return allenatoreCorrente.getSquadra().tuttiSconfitti();
+    }
+
 
 
 

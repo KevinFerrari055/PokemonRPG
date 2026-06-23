@@ -76,4 +76,12 @@ public class Squadra
     {
         return pokemonPosseduti.stream().filter(p -> !p.isFuoriCombattimento()).findFirst();
     }
+
+    /**
+     * @return true se tutti i Pokemon della squadra sono fuori combattimento
+     */
+    public boolean tuttiSconfitti()
+    {
+        return pokemonPosseduti.stream().allMatch(Pokemon::isFuoriCombattimento);
+    }
 }

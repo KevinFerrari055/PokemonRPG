@@ -229,5 +229,16 @@
     "squadra": {
       "pokemonPosseduti": []
     }
+  },
+  {
+    "id": "iyiuiuy",
+    "username": "iyiuiuy",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
   }
 ]

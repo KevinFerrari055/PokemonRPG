@@ -1315,5 +1315,76 @@
         "categoria": "SPECIALE"
       }
     ]
+  },
+  {
+    "id": "ecc9ade5-a3c6-4290-9b48-809ead4fc25f",
+    "specie": {
+      "id": "bulbasaur",
+      "nome": "Bulbasaur",
+      "tipi": [
+        {
+          "nome": "Erba"
+        }
+      ],
+      "pvBase": 45,
+      "attaccoBase": 49,
+      "difesaBase": 49,
+      "velocitaBase": 45,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 45,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "FogliaLama",
+        "tipo": {
+          "nome": "Erba"
+        },
+        "potenza": 55,
+        "precisione": 95,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "94d81a60-f362-4eec-9759-376dbf6eddb8",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 3,
+    "esperienza": 0,
+    "pvAttuali": 19,
+    "mosseApprese": [
+      {
+        "nome": "Braciere",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
   }
 ]
