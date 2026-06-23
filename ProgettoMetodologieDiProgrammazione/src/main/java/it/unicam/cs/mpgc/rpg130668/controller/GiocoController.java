@@ -120,6 +120,8 @@ public class GiocoController
     public void catturaPokemon(Pokemon avversario)
     {
         if(avversario == null) throw new NullPointerException("Il pokemon avversario è null");
+        // Ripristina metà dei PV base, cosi' il Pokemon catturato e' utilizzabile
+        avversario.ripristinaHP(avversario.getSpecie().pvBase() / 2);
         this.allenatoreCorrente.getSquadra().aggiungiPokemon(avversario);
         pokemonRepository.salva(avversario);
         this.battagliaInCorso = null;

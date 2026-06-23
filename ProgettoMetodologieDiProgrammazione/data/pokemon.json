@@ -703,5 +703,617 @@
         "categoria": "SPECIALE"
       }
     ]
+  },
+  {
+    "id": "18ca8c9e-59f8-4c9a-aee8-82e0e267de11",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 39,
+    "mosseApprese": [
+      {
+        "nome": "Graffio",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Fiammata",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 90,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "df9d13cb-8e09-4b19-9af5-597d9784801a",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 4,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Braciere",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "01043553-9d9e-4acf-8bd6-de06915ea9e0",
+    "specie": {
+      "id": "bulbasaur",
+      "nome": "Bulbasaur",
+      "tipi": [
+        {
+          "nome": "Erba"
+        }
+      ],
+      "pvBase": 45,
+      "attaccoBase": 49,
+      "difesaBase": 49,
+      "velocitaBase": 45,
+      "mosseDisponibili": []
+    },
+    "livello": 4,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Fogliolina",
+        "tipo": {
+          "nome": "Erba"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "51782682-07b3-47d9-bd3c-8ae0c94d2e73",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 3,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Braciere",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "2f502ba7-8098-405d-b8f6-3214354eb5fd",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 4,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Schizzata",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "5b128bfe-9bc7-4ed8-89e1-881cdc46e8f2",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 44,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Pistolacqua",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "185d40ab-2f86-4c0a-9564-0875647b4fee",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 44,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Pistolacqua",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "e9e28b10-0c07-4f39-8018-333552f1c753",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 3,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Braciere",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "e9a1e526-2ded-4853-9c88-006e96775b70",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 39,
+    "mosseApprese": [
+      {
+        "nome": "Graffio",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Fiammata",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 90,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "945a1ac5-d2d6-4952-af0d-9f98bf47c8db",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 3,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Schizzata",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "3b66146d-453c-4e01-a33c-2b55bfcb1a2e",
+    "specie": {
+      "id": "bulbasaur",
+      "nome": "Bulbasaur",
+      "tipi": [
+        {
+          "nome": "Erba"
+        }
+      ],
+      "pvBase": 45,
+      "attaccoBase": 49,
+      "difesaBase": 49,
+      "velocitaBase": 45,
+      "mosseDisponibili": []
+    },
+    "livello": 3,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Fogliolina",
+        "tipo": {
+          "nome": "Erba"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "f7e7726f-915c-423b-9fb0-97ef68deef31",
+    "specie": {
+      "id": "bulbasaur",
+      "nome": "Bulbasaur",
+      "tipi": [
+        {
+          "nome": "Erba"
+        }
+      ],
+      "pvBase": 45,
+      "attaccoBase": 49,
+      "difesaBase": 49,
+      "velocitaBase": 45,
+      "mosseDisponibili": []
+    },
+    "livello": 4,
+    "esperienza": 0,
+    "pvAttuali": 0,
+    "mosseApprese": [
+      {
+        "nome": "Fogliolina",
+        "tipo": {
+          "nome": "Erba"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "27a84ccd-8488-4ff8-be0a-7f93ec9f9a88",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 44,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Pistolacqua",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "569a38b4-a646-4bfd-8544-f9ebc6b89468",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 19,
+    "mosseApprese": [
+      {
+        "nome": "Braciere",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "e1233135-5ef0-4adc-a6a7-d7bdeb6a2bac",
+    "specie": {
+      "id": "squirtle",
+      "nome": "Squirtle",
+      "tipi": [
+        {
+          "nome": "Acqua"
+        }
+      ],
+      "pvBase": 44,
+      "attaccoBase": 48,
+      "difesaBase": 65,
+      "velocitaBase": 43,
+      "mosseDisponibili": []
+    },
+    "livello": 5,
+    "esperienza": 0,
+    "pvAttuali": 44,
+    "mosseApprese": [
+      {
+        "nome": "Tackle",
+        "tipo": {
+          "nome": "Normale"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "FISICA"
+      },
+      {
+        "nome": "Pistolacqua",
+        "tipo": {
+          "nome": "Acqua"
+        },
+        "potenza": 40,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "cd1e6906-39a4-4925-850c-670f019c9e52",
+    "specie": {
+      "id": "charmander",
+      "nome": "Charmander",
+      "tipi": [
+        {
+          "nome": "Fuoco"
+        }
+      ],
+      "pvBase": 39,
+      "attaccoBase": 52,
+      "difesaBase": 43,
+      "velocitaBase": 65,
+      "mosseDisponibili": []
+    },
+    "livello": 3,
+    "esperienza": 0,
+    "pvAttuali": 19,
+    "mosseApprese": [
+      {
+        "nome": "Braciere",
+        "tipo": {
+          "nome": "Fuoco"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "72d39010-81a8-4c2f-9dc3-928c4d3621de",
+    "specie": {
+      "id": "bulbasaur",
+      "nome": "Bulbasaur",
+      "tipi": [
+        {
+          "nome": "Erba"
+        }
+      ],
+      "pvBase": 45,
+      "attaccoBase": 49,
+      "difesaBase": 49,
+      "velocitaBase": 45,
+      "mosseDisponibili": []
+    },
+    "livello": 4,
+    "esperienza": 0,
+    "pvAttuali": 22,
+    "mosseApprese": [
+      {
+        "nome": "Fogliolina",
+        "tipo": {
+          "nome": "Erba"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
+  },
+  {
+    "id": "41328db8-04d2-4403-92f3-5debef92b299",
+    "specie": {
+      "id": "bulbasaur",
+      "nome": "Bulbasaur",
+      "tipi": [
+        {
+          "nome": "Erba"
+        }
+      ],
+      "pvBase": 45,
+      "attaccoBase": 49,
+      "difesaBase": 49,
+      "velocitaBase": 45,
+      "mosseDisponibili": []
+    },
+    "livello": 2,
+    "esperienza": 0,
+    "pvAttuali": 22,
+    "mosseApprese": [
+      {
+        "nome": "Fogliolina",
+        "tipo": {
+          "nome": "Erba"
+        },
+        "potenza": 10,
+        "precisione": 100,
+        "categoria": "SPECIALE"
+      }
+    ]
   }
 ]

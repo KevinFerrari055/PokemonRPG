@@ -135,4 +135,15 @@ public class Pokemon
     {
         return nickName != null ? nickName : specie.nome();
     }
+
+    /**
+     * Ripristina i punti vita del Pokemon del valore indicato,
+     * senza superare il massimo della specie.
+     * @throws IllegalArgumentException se i pv non validi
+     */
+    public void ripristinaHP(int pv)
+    {
+        if(pv <= 0) throw new IllegalArgumentException("pv non validi");
+        this.pvAttuali = Math.min(specie.pvBase(), pvAttuali + pv);
+    }
 }

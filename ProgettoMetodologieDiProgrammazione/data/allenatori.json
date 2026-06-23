@@ -55,17 +55,6 @@
     }
   },
   {
-    "id": "Kevin",
-    "username": "Kevin",
-    "posizione": {
-      "x": 10,
-      "y": 10
-    },
-    "squadra": {
-      "pokemonPosseduti": []
-    }
-  },
-  {
     "id": "ciaoo",
     "username": "ciaoo",
     "posizione": {
@@ -167,6 +156,72 @@
   {
     "id": "dsdfsdfsd",
     "username": "dsdfsdfsd",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "zzfdsdfsdf",
+    "username": "zzfdsdfsdf",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "dsfdsfsdf",
+    "username": "dsfdsfsdf",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "ddwqewqe",
+    "username": "ddwqewqe",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "fsdfsdf",
+    "username": "fsdfsdf",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "sdfsfsd",
+    "username": "sdfsfsd",
+    "posizione": {
+      "x": 5,
+      "y": 5
+    },
+    "squadra": {
+      "pokemonPosseduti": []
+    }
+  },
+  {
+    "id": "Kevin",
+    "username": "Kevin",
     "posizione": {
       "x": 5,
       "y": 5
