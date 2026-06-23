@@ -71,6 +71,5 @@ I dati vengono salvati nella cartella `data/` nella root del progetto:
 | Tasto | Azione |
 |---|---|
 | ↑ ↓ ← → | Movimento sulla mappa |
-
-- Mouse SX per scegliere la mossa del Pokemon da usare nella battaglia
+| Mouse SX | Scegliere la mossa del Pokemon da usare nella battaglia |
 
