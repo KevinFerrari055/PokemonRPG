@@ -1,7 +1,6 @@
 # Pokemon RPG
 
-Progetto per il corso di **Metodologie di Programmazione e Modellazione e Gestione
-della Conoscenza** (AA 2025/26) - Università di Camerino.
+Progetto per il corso di **Metodologie di Programmazione** (AA 2025/26) - Università di Camerino.
 
 Applicativo Java con interfaccia grafica ispirato al celebre gioco Pokemon: 
 il giocatore crea il proprio allenatore, sceglie uno starter tra Charmander, 
@@ -25,7 +24,7 @@ Il gioco si sviluppa in quattro fasi principali:
 
 ### Prerequisiti
 
-- Java 25 (LTS)
+- JDK 21 o superiore
 - Gradle
 
 ### Istruzioni
