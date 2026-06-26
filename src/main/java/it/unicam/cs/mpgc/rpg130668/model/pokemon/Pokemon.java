@@ -146,4 +146,25 @@ public class Pokemon
         if(pv <= 0) throw new IllegalArgumentException("pv non validi");
         this.pvAttuali = Math.min(specie.pvBase(), pvAttuali + pv);
     }
+
+    /**
+     * Due Pokemon sono considerati uguali se hanno lo stesso id univoco,
+     * indipendentemente dallo stato attuale (pv, livello, mosse apprese).
+     */
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (!(o instanceof Pokemon pokemon)) return false;
+        return id.equals(pokemon.id);
+    }
+
+    /**
+     * L'hashCode e' basato solo sull'id, coerente con equals.
+     */
+    @Override
+    public int hashCode()
+    {
+        return id.hashCode();
+    }
 }

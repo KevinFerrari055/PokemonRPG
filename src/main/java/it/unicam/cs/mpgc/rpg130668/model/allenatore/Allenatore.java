@@ -57,4 +57,24 @@ public class Allenatore
     public Squadra getSquadra() {
         return squadra;
     }
+
+    /**
+     * Due allenatori sono considerati uguali se hanno lo stesso id univoco.
+     */
+    @Override
+    public boolean equals(Object o)
+    {
+        if (this == o) return true;
+        if (!(o instanceof Allenatore allenatore)) return false;
+        return id.equals(allenatore.id);
+    }
+
+    /**
+     * L'hashCode e' basato solo sull'id, coerente con equals.
+     */
+    @Override
+    public int hashCode()
+    {
+        return id.hashCode();
+    }
 }
