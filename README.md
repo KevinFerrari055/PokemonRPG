@@ -30,7 +30,7 @@ Il gioco si sviluppa in quattro fasi principali:
 ### Istruzioni
 
 ```bash
-git clone https://github.com/KevinFerrari055/pokemonRPG.git
+https://github.com/KevinFerrari055/PokemonRPG.git
 cd pokemonRPG
 ```
 
