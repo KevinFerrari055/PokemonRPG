@@ -18,7 +18,7 @@ Il gioco si sviluppa in quattro fasi principali:
   con Pokemon selvatici diversi. Il giocatore si muove con le frecce direzionali
 - **Battaglia**: incontri casuali con Pokemon selvatici, sistema a turni basato 
   su velocità, efficacia dei tipi e calcolo del danno. A fine battaglia si può 
-  scegliere se catturare il Pokemon sconfitto
+  scegliere se catturare il Pokemon sconfitto e usarlo in caso di perdita del Pokemon attivo
 
 ## Come eseguire il progetto
 
